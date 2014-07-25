@@ -14,7 +14,7 @@ task :default => ["test"]
 spec = Gem::Specification.new do |s|
 
   s.name              = "geckoboard-push"
-  s.version           = "0.1.0"
+  s.version           = "0.1.3"
   s.summary           = "Ruby library for pushing widget updates to Geckoboard."
   s.author            = "Elliott Draper"
   s.email             = "el@kickcode.com"
@@ -27,7 +27,7 @@ spec = Gem::Specification.new do |s|
   s.files             = %w(README.rdoc) + Dir.glob("{test,lib}/**/*")
   s.require_paths     = ["lib"]
 
-  s.add_dependency "httparty", "~> 0.8.1"
+  s.add_dependency "httparty", "~> 0.13.0"
 
   s.add_development_dependency "fakeweb", "~> 1.3.0"
   s.add_development_dependency "mocha", "~> 0.10.0"
@@ -47,7 +47,7 @@ task :package => :gemspec
 
 # Generate documentation
 RDoc::Task.new do |rd|
-  
+
   rd.rdoc_files.include("lib/**/*.rb")
   rd.rdoc_dir = "rdoc"
 end
