@@ -24,7 +24,7 @@ module Geckoboard
     # Makes a call to Geckoboard to push data to the current widget
     def push(data)
       raise Geckoboard::Push::Error.new("API key not configured.") if Geckoboard::Push.api_key.nil? || Geckoboard::Push.api_key.empty?
-      result = self.class.post("/#{Geckoboard::Push.api_version || 'v1'}/send/#{@widget_key}", {:body => {:api_key => Geckoboard::Push.api_key, :data => data}.to_json}).parsed_response
+      result = self.class.post("/#{Geckoboard::Push.api_version || 'v1'}/send/#{@widget_key}", {:body => {:api_key => Geckoboard::Push.api_key, :data => data}.to_json})
       # when exceeding the post-limit, the error message is in result["error"], not result["message"]
       # See https://developer.geckoboard.com/#errors
       raise Geckoboard::Push::Error.new(result["message"] || result["error"] || "unknown error") unless result.ok?
