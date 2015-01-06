@@ -21,8 +21,8 @@ class PushTest < Test::Unit::TestCase
 
   def test_invalid_key
     Geckoboard::Push.api_key = "invalid"
-    response = Net::HTTPOK.new("1.1", 200, "OK")
-    response.instance_variable_set(:@body, '{"success":false,"error":"Api key has wrong format. "}')
+    response = Net::HTTPForbidden.new("1.1", 403, "Forbidden")
+    response.instance_variable_set(:@body, '{"message":"Your API key is invalid"}')
     response.instance_variable_set(:@read, true)
     Net::HTTP.any_instance.expects(:request).returns(response)
     assert_raise Geckoboard::Push::Error do
