@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{geckoboard-push}
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Elliott Draper"]
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = %q{el@kickcode.com}
   s.extra_rdoc_files = ["README.rdoc"]
   s.files = ["README.rdoc", "test/geckoboard/push_test.rb", "lib/geckoboard/push.rb", "lib/geckoboard-push.rb"]
-  s.homepage = %q{http://docs.geckoboard.com/api/push.html}
+  s.homepage = %q{https://developer.geckoboard.com/#push-overview}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}

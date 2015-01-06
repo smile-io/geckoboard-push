@@ -14,11 +14,11 @@ task :default => ["test"]
 spec = Gem::Specification.new do |s|
 
   s.name              = "geckoboard-push"
-  s.version           = "0.1.4"
+  s.version           = "0.1.5"
   s.summary           = "Ruby library for pushing widget updates to Geckoboard."
   s.author            = "Elliott Draper"
   s.email             = "el@kickcode.com"
-  s.homepage          = "http://docs.geckoboard.com/api/push.html"
+  s.homepage          = "https://developer.geckoboard.com/#push-overview"
 
   s.has_rdoc          = true
   s.extra_rdoc_files  = %w(README.rdoc)
